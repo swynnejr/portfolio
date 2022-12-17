@@ -9,4 +9,10 @@
   .sectionTitle {
     @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl
   }
+  .contactOptions {
+    @apply flex items-center space-x-5 justify-center
+  }
+  .contactInput {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#e93232]/40 focus:text-white hover:border-[#e93232]/40 
+  }
 }
