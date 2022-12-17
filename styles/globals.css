@@ -6,4 +6,7 @@
   .heroButton {
     @apply px-6 py-2 border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7ABBA]/40 hover:text-[#F7ABBA]
   }
+  .sectionTitle {
+    @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl
+  }
 }
