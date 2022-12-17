@@ -21,9 +21,9 @@ function Hero({}: Props) {
       <BackGroundCircles />
       <Image
         className="relative mx-auto rounded-full object-cover"
-        src="https://yt3.googleusercontent.com/ytc/AMLnZu-poVJeR0yAe2QBx1HhDnNPyMH2O-AjYpVZfRisAA=s88-c-k-c0x00ffffff-no-rj"
-        width={100}
-        height={100}
+        src="https://avatars.githubusercontent.com/u/86032768?v=4"
+        width={300}
+        height={300}
         alt="Picture of Sam"
       />
       <div className="z-20">

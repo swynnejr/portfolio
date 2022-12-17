@@ -5,6 +5,9 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import WorkExperience from "../components/WorkExperience";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,29 +19,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Header */}
       <Header />
-      {/* Hero */}
-      {/* <section id="hero" className='snap-start'> */}
       <section id="hero" className="snap-start">
         <Hero />
       </section>
-      {/* About */}
-      {/* <section id="about" className="snap-center"> */}
       <section id="about" className="snap-center">
         <About />
       </section>
-      {/* Experience */}
       <section id="experience" className="snap-center">
         <WorkExperience />
       </section>
-      {/* Skills */}
-
-      {/* Projects */}
-
-      {/* Contact Me */}
-
-      <h1 className="text-red-500">Portfolio</h1>
+      <section id="skills" className="snap-center">
+        <Skills />
+      </section>
+      <section id="projects" className="snap-center">
+        <Projects />
+      </section>
+      <section id="contact me" className="snap-center">
+        <Contact />
+      </section>
     </div>
   );
 }
