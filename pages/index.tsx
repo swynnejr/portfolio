@@ -8,6 +8,7 @@ import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,9 +36,23 @@ export default function Home() {
       <section id="projects" className="snap-center">
         <Projects />
       </section>
-      <section id="contact me" className="snap-center">
+      <section id="contact" className="snap-center">
         <Contact />
       </section>
+
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full">
+          <div className="flex items-center justify-center">
+            <Image
+              className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              src="https://avatars.githubusercontent.com/u/86032768?v=4"
+              width={75}
+              height={75}
+              alt="Picture of Sam"
+            />
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 }
