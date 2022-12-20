@@ -3,13 +3,17 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackGroundCircles from "./BackGroundCircles";
 import Image from "next/image";
 import Link from "next/link";
+import { PortfolioInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  portfolioInfo: PortfolioInfo;
+};
 
-function Hero({}: Props) {
+function Hero({ portfolioInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Welcome, the name's Sam Wynne",
+      `Welcome, the name's ${portfolioInfo?.name}`,
       "I am a nerd from Texas",
       "<WhoLovesToCode />",
     ],
@@ -21,14 +25,14 @@ function Hero({}: Props) {
       <BackGroundCircles />
       <Image
         className="relative mx-auto rounded-full object-cover"
-        src="https://avatars.githubusercontent.com/u/86032768?v=4"
+        src={urlFor(portfolioInfo?.profilePic).url()}
         width={300}
         height={300}
         alt="Picture of Sam"
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
-          Software Engineer
+          {portfolioInfo?.role}
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>

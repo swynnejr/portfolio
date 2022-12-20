@@ -16,6 +16,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'backgroundInformation',
+      title: 'BackgroundInformation',
+      type: 'string',
+    }),
+    defineField({
       name: 'heroImage',
       title: 'Image',
       type: 'image',

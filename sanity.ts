@@ -12,4 +12,4 @@ export const sanityClient = createClient(config)
 
 export const data = sanityClient.fetch(groq`*[]`)
 
-export const urlFor = (source: any) => createImageUrlBuilder(config).image(source)
+export const urlFor = (source: any) => createImageUrlBuilder(sanityClient).image(source)
