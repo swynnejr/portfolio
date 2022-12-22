@@ -1,11 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+function Projects({ projects }: Props) {
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
       <h3 className="sectionTitle">Projects</h3>
@@ -27,10 +30,10 @@ function Projects({}: Props) {
             >
               <Image
                 className="rounded-full"
-                src="https://brandeps.com/logo-download/R/React-logo-vector-01.svg"
+                src={urlFor(project?.image).url()}
                 width={500}
                 height={500}
-                alt="React logo"
+                alt="Project image"
               />
             </motion.div>
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
@@ -38,18 +41,13 @@ function Projects({}: Props) {
                 <span className="underline decoration-[#e93232]/50">
                   Case Study {i + 1} of {projects.length}:
                 </span>{" "}
-                Project.title
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {/* Maybe map project.technologies */}
+              </div>
               <p className="text-lg text-center md:text-left">
-                Golf marketplace that allows users to make purchases with the
-                Stripe API, add track cards with Fidel API, and build loyalty
-                points with White Label Loyalty API. You can book Tee Times or
-                buy equipment across multiple vendors while building points for
-                rewards. Golf marketplace that allows users to make purchases
-                with the Stripe API, add track cards with Fidel API, and build
-                loyalty points with White Label Loyalty API. You can book Tee
-                Times or buy equipment across multiple vendors while building
-                points for rewards.
+                {project.summary}
               </p>
             </div>
           </div>
