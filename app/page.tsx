@@ -46,15 +46,7 @@ async function fetchSocials() {
   return socials;
 }
 
-type Props = {
-  portfolioInfo: PortfolioInfo;
-  experience: Experience[];
-  skills: Skill[];
-  projects: Project[];
-  socials: Social[];
-}
-
-export default async function Page({}: Props) {
+export default async function Page() {
   const portfolioInfo = await fetchPortfolioInfo();
   const experience = await fetchExperiences();
   const projects = await fetchProjects();

@@ -11,13 +11,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Link from "next/link";
-// import { GetStaticProps } from "next";
 import { Experience, PortfolioInfo, Project, Skill, Social } from "../typings";
-// import { fetchPortfolioInfo } from "../utils/fetchPortfolioInfo";
-// import { fetchExperiences } from "../utils/fetchExperiences";
-// import { fetchSkills } from "../utils/fetchSkills";
-// import { fetchProjects } from "../utils/fetchProjects";
-// import { fetchSocials } from "../utils/fetchSocials";
 
 type Props = {
   portfolioInfo: PortfolioInfo;
@@ -80,21 +74,3 @@ const HomePage = ({
 
 export default HomePage
 
-// export const getStaticProps: GetStaticProps<Props> = async () => {
-  // const portfolioInfo: PortfolioInfo = await fetchPortfolioInfo();
-  // const experience: Experience[] = await fetchExperiences();
-  // const skills: Skill[] = await fetchSkills();
-  // const projects: Project[] = await fetchProjects();
-  // const socials: Social[] = await fetchSocials();
-
-//   return {
-//     props: {
-//       portfolioInfo,
-//       experience,
-//       skills,
-//       projects,
-//       socials,
-//     },
-//     revalidate: 100,
-//   };
-// };
