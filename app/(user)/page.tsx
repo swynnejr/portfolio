@@ -1,6 +1,6 @@
 import React from 'react'
-import HomePage from './HomePage';
-import { Experience, PortfolioInfo, Project, Skill, Social } from "../typings";
+import HomePage from '../HomePage';
+import { Experience, PortfolioInfo, Project, Skill, Social } from "../../typings";
 
 async function fetchPortfolioInfo() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getPortfolioInfo`, { next: { revalidate: 300 } });
