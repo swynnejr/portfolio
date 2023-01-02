@@ -3,7 +3,7 @@ import HomePage from './HomePage';
 import { Experience, PortfolioInfo, Project, Skill, Social } from "../typings";
 
 async function fetchPortfolioInfo() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getPortfolioInfo`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getPortfolioInfo`, { next: { revalidate: 300 } });
 
   const data = await res.json();
   const portfolioInfo: PortfolioInfo = data.portfolioInfo;
@@ -12,7 +12,7 @@ async function fetchPortfolioInfo() {
 }
 
 async function fetchExperiences() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperiences`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getExperiences`, { next: { revalidate: 300 } });
 
   const data = await res.json();
   const experience: Experience[] = data.experience;
@@ -21,7 +21,7 @@ async function fetchExperiences() {
 }
 
 async function fetchProjects() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`, { next: { revalidate: 300 } });
 
   const data = await res.json();
   const projects: Project[] = data.projects;
@@ -30,7 +30,7 @@ async function fetchProjects() {
 }
 
 async function fetchSkills() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSkills`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSkills`, { next: { revalidate: 300 } });
 
   const data = await res.json();
   const skills: Skill[] = data.skills;
@@ -38,7 +38,7 @@ async function fetchSkills() {
   return skills;
 }
 async function fetchSocials() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getSocials`, { next: { revalidate: 300 } });
 
   const data = await res.json();
   const socials: Social[] = data.socials;
