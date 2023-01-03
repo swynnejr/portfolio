@@ -35,12 +35,12 @@ function Skill({ skill, directionLeft }: Props) {
           alt="Technology Logo"
         />
       </motion.div>
-        <div className="absolute opacity-0 group-hover:opacity-80 transition duration-500 ease-in-out group-hover:bg-white h-24 w-24 md:h-28 md:w-28 xl:h-32 xl:w-32 rounded-full z-10 border-4 border-black">
-          <div className="p-5 items-center justify-center h-full">
-            <p className="text-xl font-bold text-black opacity-100">
+        <div className="absolute text-center items-center justify-center align-middle opacity-0 group-hover:opacity-80 transition duration-500 ease-in-out group-hover:bg-white h-24 w-24 md:h-28 md:w-28 xl:h-32 xl:w-32 rounded-full z-10">
+          <div className="p-2 md:p-5 items-center align-middle justify-center text-center h-full">
+            {/* <p className="hidden sm:block sm:text-xl font-bold text-black opacity-100 text-center break-all">
               {skill?.title}
-            </p>
-            <p className="text-3xl font-bold text-black opacity-100">
+            </p> */}
+            <p className="text-xl md:text-3xl font-bold text-black opacity-100">
               {skill?.progress}%
             </p>
           </div>

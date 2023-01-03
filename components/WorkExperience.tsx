@@ -22,14 +22,10 @@ function WorkExperience({experience}: Props) {
       <h3 className='sectionTitle'>
         Experience
       </h3>
-      <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50'>
+      <div className='w-full flex space-x-5 p-2 sm:p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50'>
         {experience?.map((experience) => (
           <ExperienceCard key={experience._id} experience={experience} />
         ))}
-        {/* <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard /> */}
       </div>
     </motion.div>
   )
