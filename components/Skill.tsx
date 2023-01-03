@@ -28,7 +28,7 @@ function Skill({ skill, directionLeft }: Props) {
         }}
       >
         <Image
-          className="rounded-full border border-gray-500 object-cover p-1 h-24 w-24 md:h-28 md:w-28 xl:h-32 xl:w-32 filter group-hover:grayscale transition duration-500 ease-in-out"
+          className="rounded-full border border-gray-500 object-cover p-1 h-24 w-24 md:h-28 md:w-28 filter group-hover:grayscale transition duration-500 ease-in-out"
           src={urlFor(skill?.image).url()}
           width={30}
           height={30}

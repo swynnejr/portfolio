@@ -12,11 +12,11 @@ function Projects({ projects }: Props) {
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
       <h3 className="sectionTitle">Projects</h3>
-      <div className="relative  w-[375px] h-[575px] sm:w-[450px] sm:h-[525px] md:w-[600px] md:h-[700px] xl:w-[900px] xl:h-[900px] flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50">
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center md:justify-center h-screen"
+            className="w-screen p-5 md:p-20 lg:p-40 flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center h-screen"
           >
             <motion.div
               initial={{
@@ -29,10 +29,10 @@ function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
             >
               <Image
-                className="rounded-full w-[100px] h-[100px] md:w-[100px] lg:w-[400px]"
+                className="rounded-2xl w-[175px] lg:w-[250px]"
                 src={urlFor(project?.image).url()}
-                width={100}
-                height={100}
+                width={175}
+                height={175}
                 alt="Project image"
               />
             </motion.div>
