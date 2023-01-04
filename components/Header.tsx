@@ -6,7 +6,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { Social } from "../typings";
 
 type Props = {
-  socials: Social[]
+  socials: Social[];
 };
 
 function Header({ socials }: Props) {
@@ -32,10 +32,36 @@ function Header({ socials }: Props) {
           className="flex flex-row items-center"
         >
           {socials.map((social) => (
-            <SocialIcon key={social._id} url={social.url} fgColor="gray" bgColor="transparent" />
+            <SocialIcon
+              key={social._id}
+              url={social.url}
+              fgColor="gray"
+              bgColor="transparent"
+            />
           ))}
-          <Link href="/blog" className="color-gray-400">BLOG</Link>
         </motion.div>
+        <Link href="/blog">
+          <motion.div
+            initial={{
+              y: -100,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              delay: 0.5,
+              y: { duration: 1.5 },
+              default: { ease: "linear" },
+            }}
+            className="flex flex-row text-2xl sm:text-4xl text-bold items-center animate-pulse text-gray-300 cursor-pointer mt-2 sm:mt-0"
+          >
+            <p>BLOG</p>
+          </motion.div>
+        </Link>
         <Link href="#contact">
           <motion.div
             initial={{
@@ -53,11 +79,9 @@ function Header({ socials }: Props) {
               x: { duration: 1.5 },
               default: { ease: "linear" },
             }}
-            className="flex flex-row items-center text-gray-300 cursor-pointer"
+            className="flex flex-row items-center text-gray-300 cursor-pointer mt-2 mr-3 sm:m-0 sm:mr-0"
           >
-            <EnvelopeIcon
-              className="cursor-pointer h-8 w-8 text-gray-300"
-            />
+            <EnvelopeIcon className="cursor-pointer h-8 w-8 text-gray-300" />
             <p className="uppercase hidden md:inline-flex text-md ml-5 text-gray-300">
               Get in touch
             </p>
