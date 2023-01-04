@@ -34,6 +34,7 @@ function Header({ socials }: Props) {
           {socials.map((social) => (
             <SocialIcon key={social._id} url={social.url} fgColor="gray" bgColor="transparent" />
           ))}
+          <Link href="/blog" className="color-gray-400">BLOG</Link>
         </motion.div>
         <Link href="#contact">
           <motion.div
