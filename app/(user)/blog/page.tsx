@@ -8,6 +8,8 @@ import { client } from '../../../lib/sanity.client';
 
 type Props = {}
 
+export const revalidate = 3600; // revalidate this page every hour
+
 const query = groq`*[_type=='post'] {
   ...,
   author->,

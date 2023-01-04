@@ -46,6 +46,8 @@ async function fetchSocials() {
   return socials;
 }
 
+export const revalidate = 3600; // revalidate this page every hour
+
 export default async function Page() {
   const portfolioInfo = await fetchPortfolioInfo();
   const experience = await fetchExperiences();
