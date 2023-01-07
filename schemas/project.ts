@@ -35,5 +35,16 @@ export default defineType({
       type: 'array',
       of: [{type: 'reference', to: {type: 'skill'}}],
     }),
+    defineField({
+      name: 'dateStarted',
+      title: 'Date Started',
+      type: 'datetime',
+    }),
+    defineField({
+      name: 'dateEnded',
+      title: 'Date Ended',
+      type: 'datetime',
+    }),
+
   ],
 })
