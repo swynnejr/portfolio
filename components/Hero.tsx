@@ -14,7 +14,7 @@ function Hero({ portfolioInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Welcome, the name's ${portfolioInfo?.name}`,
-      "I am a developer from Texas",
+      "I am an entrepreneur from Texas",
       "<WhoLovesToCode/>",
     ],
     loop: true,
