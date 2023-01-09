@@ -30,11 +30,11 @@ const HomePage = ({
 }: Props) => {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0  scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50">
-      <Head>
+      {/* <Head>
         <title>TexanNerd Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
       <Header socials={socials} />
       <section id="hero" className="snap-start">
         <Hero portfolioInfo={portfolioInfo} />
@@ -55,7 +55,7 @@ const HomePage = ({
         <Contact />
       </section>
 
-      <Link href="#hero">
+      <Link href="#hero" scroll={false}>
         <footer className="sticky bottom-5 w-full">
           <div className="flex items-center justify-center">
             <Image
