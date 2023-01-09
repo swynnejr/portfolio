@@ -14,7 +14,7 @@ function Hero({ portfolioInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Welcome, the name's ${portfolioInfo?.name}`,
-      "I am an entrepreneur from Texas",
+      "I am an Tech Consultant from Texas",
       "<WhoLovesToCode/>",
     ],
     loop: true,
@@ -39,16 +39,16 @@ function Hero({ portfolioInfo }: Props) {
           <Cursor cursorColor="#FF000" />
         </h1>
         <div className="pt-5">
-          <Link href="#about">
+          <Link href="/#about" scroll={false}>
             <button className="heroButton">About</button>
           </Link>
-          <Link href="#experience">
+          <Link href="/#experience" scroll={false}>
             <button className="heroButton">Experience</button>
           </Link>
-          <Link href="#skills">
+          <Link href="/#skills" scroll={false}>
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="#projects">
+          <Link href="/#projects" scroll={false}>
             <button className="heroButton">Projects</button>
           </Link>
         </div>
