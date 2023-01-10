@@ -24,10 +24,10 @@ function Hero({ portfolioInfo }: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackGroundCircles />
       <Image
-        className="relative mx-auto rounded-full object-cover"
+        className="relative mx-auto rounded-full object-cover xl:h-[500px] xl:w-[500px]"
         src={urlFor(portfolioInfo?.profilePic).url()}
-        width={300}
-        height={300}
+        width={500}
+        height={500}
         alt="Picture of Sam"
       />
       <div className="z-20">

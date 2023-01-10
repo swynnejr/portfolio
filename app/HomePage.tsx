@@ -55,7 +55,7 @@ const HomePage = ({
         <Contact />
       </section>
 
-      <Link href="#hero" scroll={false}>
+      {/* <Link href="#hero" scroll={false}>
         <footer className="sticky bottom-5 w-full">
           <div className="flex items-center justify-center">
             <Image
@@ -67,7 +67,7 @@ const HomePage = ({
             />
           </div>
         </footer>
-      </Link>
+      </Link> */}
     </div>
   );
 };
