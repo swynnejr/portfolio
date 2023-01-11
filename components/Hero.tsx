@@ -34,16 +34,16 @@ function Hero({ portfolioInfo }: Props) {
           <Cursor cursorColor="#FF000" />
         </h1>
         <div className="pt-5">
-          <Link href="/#about" scroll={false}>
+          <Link href="#about" passHref scroll={false}>
             <button className="heroButton">About</button>
           </Link>
-          <Link href="/#experience" scroll={false}>
+          <Link href="#experience" scroll={false}>
             <button className="heroButton">Experience</button>
           </Link>
-          <Link href="/#skills" scroll={false}>
+          <Link href="#skills" scroll={false}>
             <button className="heroButton">Skills</button>
           </Link>
-          <Link href="/#projects" scroll={false}>
+          <Link href="#projects" scroll={false}>
             <button className="heroButton">Projects</button>
           </Link>
         </div>

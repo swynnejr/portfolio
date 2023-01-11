@@ -1,8 +1,8 @@
 type Props = {};
 
-function Banner({}: Props) {
+function BlogBanner({}: Props) {
   return (
-    <div className="flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold md:px-10 py-5 mb-10">
+    <div className="flex flex-col text-white lg:flex-row lg:space-x-5 justify-between font-bold md:px-10 py-5 mb-10">
       <div>
         <div className="flex flex-col">
           <h1 className="text-7xl">Sam Wynne: </h1>
@@ -24,4 +24,4 @@ function Banner({}: Props) {
   );
 }
 
-export default Banner;
+export default BlogBanner;

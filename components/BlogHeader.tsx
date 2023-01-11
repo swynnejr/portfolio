@@ -17,7 +17,7 @@ function BlogHeader({}: Props) {
               alt="Picture of Sam"
             />
         </Link>
-        <h1>Sam Wynne</h1>
+        <h1 className='text-white'>Sam Wynne</h1>
       </div>
       <div>
         <Link href="/blog" className='px-5 py-3 text-sm md:text-base bg-gray-900 text-[#ffbbbb] flex items-center rounded-full text-center'>Mailing List Coming Soon</Link>

@@ -1,4 +1,4 @@
-import Banner from '../../../../components/Banner'
+import BlogBanner from '../../../../components/BlogBanner'
 import BlogHeader from '../../../../components/BlogHeader'
 import '../../../../styles/globals.css'
 
@@ -11,7 +11,7 @@ export default function RootLayout({
     <html lang="en">
       <body className='max-w-[2000px] w-[90%] mx-auto'>
         <BlogHeader />
-        <Banner />
+        <BlogBanner />
         {children}
       </body>
     </html>

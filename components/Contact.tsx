@@ -31,7 +31,7 @@ function Contact({}: Props) {
     <div className="h-screen flex relative flex-col text-center md:text-left max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="sectionTitle">Contact</h3>
       <div className="flex flex-col w-full sm:w-fit space-y-1 sm:space-y-2 mt-5 md:space-y-5">
-        <h4 className="font-semibold text-2xl sm:text-4xl text-center">
+        <h4 className="font-semibold text-2xl sm:text-4xl text-center hidden md:inline-block">
           I have what you need.
         </h4>
           {/* <span className="underline decoration-[#e93232]/50 text-lg lg:text-3xl text-center">Lets talk.</span> */}

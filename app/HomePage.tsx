@@ -30,7 +30,7 @@ const HomePage = ({
   return (
     <div className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0  scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50">
       <Header socials={socials} />
-      <section id="hero" className="snap-start">
+      <section id="hero" className="snap-center">
         <Hero portfolioInfo={portfolioInfo} />
       </section>
       <section id="about" className="snap-center">
@@ -50,7 +50,7 @@ const HomePage = ({
       </section>
 
       <Link href="#hero" scroll={false}>
-        <footer className="sticky bottom-5 w-full">
+        <footer className="sticky bottom-5 w-full hidden md:inline-block">
           <div className="flex items-center justify-center">
             <Image
               className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
