@@ -14,7 +14,7 @@ function BackGroundCircles({ portfolioInfo }: Props) {
     >
       <div className="col-start-1 row-start-1 items-center my-auto mx-auto z-50">
         <Image
-          className="mx-auto rounded-full object-cover md:h-[325px] md:w-[325px] lg:h-[400p] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
+          className="mx-auto rounded-full object-cover md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
           src={urlFor(portfolioInfo?.profilePic).url()}
           width={250}
           height={250}
