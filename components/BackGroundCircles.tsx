@@ -1,29 +1,30 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import { urlFor } from "../sanity";
+import Image from "next/image";
+import { PortfolioInfo } from "../typings";
 
-type Props = {}
+type Props = {
+  portfolioInfo: PortfolioInfo;
+};
 
-function BackGroundCircles({}: Props) {
+function BackGroundCircles({ portfolioInfo }: Props) {
   return (
-    <motion.div 
-    initial={{
-      opacity: 0,
-    }}
-    animate={{
-      scale: [1, 2, 2, 3, 1],
-      opacity: [0.1, 0.2, 0.4, 0.8, 0.1, 1],
-      borderRadius: ["20%","20%","50%","80%","20%",]
-    }}
-    transition={{
-      duration: 2.5,
-    }}
-    className='relative flex justify-center items-center'>
-      <div className='absolute border border-[#333333] rounded-full h-[200px] w-[200px] mt-52 animate-ping' />
-      <div className='absolute border border-[#333333] rounded-full h-[300px] w-[300px] mt-52' />
-      <div className='absolute border border-[#333333] rounded-full h-[500px] w-[500px] mt-52' />
-      <div className='absolute border border-[#e93232] rounded-full h-[650px] w-[650px] mt-52 animate-pulse' />
-    </motion.div>
-  )
+    <div
+      id="atom"
+      className="h-[5em] w-[5em] lg:h-[10em] lg:w-[10-em] relative flex"
+    >
+      <div className="col-start-1 row-start-1 items-center my-auto mx-auto z-50">
+        <Image
+          className="mx-auto rounded-full object-cover md:h-[325px] md:w-[325px] lg:h-[400p] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
+          src={urlFor(portfolioInfo?.profilePic).url()}
+          width={250}
+          height={250}
+          alt="Picture of Sam"
+        />
+      </div>
+      <div className="right orbit"></div>
+      <div className="left orbit"></div>
+    </div>
+  );
 }
 
-export default BackGroundCircles
+export default BackGroundCircles;

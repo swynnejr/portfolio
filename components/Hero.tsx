@@ -1,10 +1,8 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackGroundCircles from "./BackGroundCircles";
-import Image from "next/image";
 import Link from "next/link";
 import { PortfolioInfo } from "../typings";
-import { urlFor } from "../sanity";
 
 type Props = {
   portfolioInfo: PortfolioInfo;
@@ -14,7 +12,7 @@ function Hero({ portfolioInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
       `Welcome, the name's ${portfolioInfo?.name}`,
-      "I am an Tech Consultant from Texas",
+      "I am a Tech Consultant from Texas",
       "<WhoLovesToCode/>",
     ],
     loop: true,
@@ -22,14 +20,11 @@ function Hero({ portfolioInfo }: Props) {
   });
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-      <BackGroundCircles />
-      <Image
-        className="relative mx-auto rounded-full object-cover xl:h-[500px] xl:w-[500px]"
-        src={urlFor(portfolioInfo?.profilePic).url()}
-        width={500}
-        height={500}
-        alt="Picture of Sam"
-      />
+      <div className="grid">
+        <div className="col-start-1 row-start-1">
+          <BackGroundCircles portfolioInfo={portfolioInfo} />
+        </div>
+      </div>
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {portfolioInfo?.role}

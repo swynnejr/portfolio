@@ -1,8 +1,6 @@
 'use client';
 
-import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -12,6 +10,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import Link from "next/link";
 import { Experience, PortfolioInfo, Project, Skill, Social } from "../typings";
+import urlFor from "../lib/urlFor";
 
 type Props = {
   portfolioInfo: PortfolioInfo;
@@ -29,12 +28,7 @@ const HomePage = ({
   socials,
 }: Props) => {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0  scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50">
-      {/* <Head>
-        <title>TexanNerd Portfolio</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+    <div className="text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0  scrollbar-thin scrollbar-track gray-400/20 scrollbar-thumb-[#e93232]/50">
       <Header socials={socials} />
       <section id="hero" className="snap-start">
         <Hero portfolioInfo={portfolioInfo} />
@@ -55,19 +49,19 @@ const HomePage = ({
         <Contact />
       </section>
 
-      {/* <Link href="#hero" scroll={false}>
+      <Link href="#hero" scroll={false}>
         <footer className="sticky bottom-5 w-full">
           <div className="flex items-center justify-center">
             <Image
               className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
-              src="https://avatars.githubusercontent.com/u/86032768?v=4"
+              src={urlFor(portfolioInfo?.profilePic).url()}
               width={75}
               height={75}
               alt="Picture of Sam"
             />
           </div>
         </footer>
-      </Link> */}
+      </Link>
     </div>
   );
 };
