@@ -101,8 +101,9 @@ async function Post({ params: { slug } }: Props) {
           </section>
         </div>
       </section>
-
+      <div className="text-white">
       <PortableText value={post.body} components={RichTextComponents} />
+      </div>
     </article>
   );;
 }
