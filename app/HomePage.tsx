@@ -49,7 +49,7 @@ const HomePage = ({
         <Contact />
       </section>
 
-      <Link href="#hero" scroll={false}>
+      <a href="#hero" >
         <footer className="sticky bottom-5 w-full hidden md:inline-block">
           <div className="flex items-center justify-center">
             <Image
@@ -61,7 +61,7 @@ const HomePage = ({
             />
           </div>
         </footer>
-      </Link>
+      </a>
     </div>
   );
 };
