@@ -38,11 +38,11 @@ function Contact({portfolioInfo}: Props) {
         <div className="space-y-1 sm:space-y-2">
           <div className="contactOptions">
             <PhoneIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">{portfolioInfo.phoneNumber}</p>
+            <a href={`sms:${portfolioInfo.phoneNumber}`} className="text-lg md:text-2xl underline">{portfolioInfo.phoneNumber}</a>
           </div>
           <div className="contactOptions">
             <EnvelopeIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">{portfolioInfo.email}</p>
+            <a href={`mailto:${portfolioInfo.email}`} className="text-lg md:text-2xl underline">{portfolioInfo.email}</a>
           </div>
           <div className="contactOptions">
             <MapPinIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
@@ -50,7 +50,7 @@ function Contact({portfolioInfo}: Props) {
           </div>
           <div className="contactOptions">
             <CalendarDaysIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">Book a chat</p>
+            <a className="text-lg md:text-2xl underline cursor-pointer" href="https://calendly.com/TexanNerd">Book a chat</a>
           </div>
         </div>
         <form
