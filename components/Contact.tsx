@@ -5,8 +5,9 @@ import {
   CalendarDaysIcon,
 } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PortfolioInfo } from "../typings";
 
-type Props = {};
+type Props = {portfolioInfo: PortfolioInfo};
 
 type Inputs = {
   name: string;
@@ -15,7 +16,7 @@ type Inputs = {
   message: string;
 };
 
-function Contact({}: Props) {
+function Contact({portfolioInfo}: Props) {
   const {
     register,
     handleSubmit,
@@ -37,15 +38,15 @@ function Contact({}: Props) {
         <div className="space-y-1 sm:space-y-2">
           <div className="contactOptions">
             <PhoneIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">(214) 991 0669</p>
+            <p className="text-lg md:text-2xl">{portfolioInfo.phoneNumber}</p>
           </div>
           <div className="contactOptions">
             <EnvelopeIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">SaucerSam@gmail.com</p>
+            <p className="text-lg md:text-2xl">{portfolioInfo.email}</p>
           </div>
           <div className="contactOptions">
             <MapPinIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
-            <p className="text-lg md:text-2xl">Dallas, TX</p>
+            <p className="text-lg md:text-2xl">{portfolioInfo.address}</p>
           </div>
           <div className="contactOptions">
             <CalendarDaysIcon className="text-[#e93232] h-7 w-7 animate-pulse" />
