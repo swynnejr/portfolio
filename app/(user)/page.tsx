@@ -8,6 +8,9 @@ import {
   Social,
 } from "../../typings";
 
+// Fetch Portfolio Data from Sanity.io
+// This information can be modified at swynne.com/studio"
+
 async function fetchPortfolioInfo() {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getPortfolioInfo`,
