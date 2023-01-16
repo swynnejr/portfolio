@@ -26,6 +26,7 @@ function Skills({skills}: Props) {
       <h3 className="top-36 absolute uppercase tracking-[3px] text-gray-500 text-sm">
         Hover over a skill for current proficiency
       </h3>
+      {/* Animate half of the logos coming in from the each side */}
       <div className="grid grid-cols-4 mt-0 sm:gap-5 w-[375px] sm:w-[450px] md:mt-10 md:w-[600px] xl:mt-25">
         {skills?.slice(0, skills.length /2 ).map((skill) => (
           <Skill key={skill._id} skill={skill} />
