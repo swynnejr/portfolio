@@ -15,7 +15,7 @@ function BackGroundCircles({ portfolioInfo }: Props) {
     >
       <motion.div 
       className="col-start-1 row-start-1 items-center my-auto mx-auto z-50"
-      initial={{ scale: 0.9 }}
+      initial={{ scale: 0.7 }}
       animate={{ scale: 1 }}
       transition={{
         default: {
