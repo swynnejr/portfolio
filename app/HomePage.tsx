@@ -43,7 +43,7 @@ const HomePage = ({
         <Projects projects={projects} />
       </section>
       <section id="contact" className="snap-center">
-        <Contact />
+        <Contact portfolioInfo={portfolioInfo} />
       </section>
     </div>
   );
