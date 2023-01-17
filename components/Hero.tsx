@@ -29,10 +29,12 @@ function Hero({ portfolioInfo }: Props) {
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {portfolioInfo?.role}
         </h2>
-        <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold px-10">
+        <div className="h-[72px] sm:h-[35px] md:h-[43px] lg:h-[50px]">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold px-10 my-auto">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#FF000" />
         </h1>
+        </div>
         <div className="pt-5">
           <a href="#about" >
             <button className="heroButton">About</button>
