@@ -31,10 +31,10 @@ function BackGroundCircles({ portfolioInfo }: Props) {
         }}
       >
         <Image
-          className="mx-auto rounded-full object-cover h-[250px] w-[250px] md:h-[325px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
+          className="mx-auto rounded-full object-cover h-[250px] w-[250px] md:h-[300px] md:w-[325px] lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]"
           src={urlFor(portfolioInfo?.profilePic).url()}
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
           alt="Picture of Sam"
         />
       </motion.div>

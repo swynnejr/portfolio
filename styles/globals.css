@@ -32,12 +32,17 @@ body {
 }
 
 #atom {
-  font-size: 60px;
+  font-size: 20px;
   height: 10em;
   width: 10em;
   position: relative;
 }
 
+@media screen and (max-width: 400px) {
+  #atom {
+      font-size: 25px;
+  }
+}
 @media screen and (max-width: 600px) {
   #atom {
       font-size: 30px;
@@ -45,17 +50,23 @@ body {
 }
 @media screen and (min-width: 601px) {
   #atom {
-      font-size: 40px;
+      font-size: 35px;
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   #atom {
-      font-size: 50px;
+      font-size: 45px;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   #atom {
-      font-size: 60px;
+      font-size: 52px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  #atom {
+      font-size: 65px;
   }
 }
 
