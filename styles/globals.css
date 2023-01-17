@@ -77,11 +77,12 @@ body {
   display: block;
   height: 1.2em;
   width: 1.2em;
-  background-color: rgb(228, 228, 75);
-  box-shadow: 0 0 1em 0.5em powderblue;
-  border: 0.1em solid whitesmoke;
+  background-color: rgb(232, 96, 171);
+  box-shadow: 0 0 1em 0.5em rgb(74, 210, 255);
+  border: 0.05em solid rgb(255, 255, 255);
   border-radius: 50%;
   position: absolute;
+  z-index: 0;
 }
 
 .left.orbit::after {
@@ -98,27 +99,29 @@ body {
 .right.orbit::after {
   bottom: 1em;
   right: 1em;
-  animation: 5s linear infinite reverse grow-shrink;
+  animation: 4s linear infinite reverse grow-shrink;
 }
 
 @keyframes revolve {
   50% {
     transform: rotate(180deg) scale(0.75);
+    /* z-index: 50; */
   }
   to {
     transform: rotate(360deg) scale(1);
+    /* z-index: 0; */
   }
 }
 
 @keyframes grow-shrink {
   50% {
-    transform: scale(0.6);
-    box-shadow: 0 0 0.5em 0.1em whitesmoke;
-    z-index: 0;
+    transform: scale(0.75);
+    box-shadow: 0 0 0.5em 0.1em rgb(232, 96, 171);
+    background-color: rgb(74, 210, 255);
+
   }
   to {
     transform: scale(1);
-    box-shadow: 0 0 1em 0.5em powderblue;
-    z-index: 50;
+    box-shadow: 0 0 1em 0.5em rgb(74, 210, 255);
   }
 }
