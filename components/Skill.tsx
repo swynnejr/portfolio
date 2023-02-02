@@ -12,6 +12,7 @@ type Props = {
 function Skill({ skill, directionLeft }: Props) {
   return (
     <div className="group relative flex cursor-pointer">
+      {/* useSpring might be cool here: https://www.framer.com/motion/use-spring/ */}
       <motion.div
         initial={{
           x: directionLeft ? -100 : 100,
